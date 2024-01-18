@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+html,
+body {
+    font-family: 'Amiri';
+    font-size: 16px;
+    background-color: #e3eeecc5;
+}
+
+.accordionHeader {
+    padding: 25px 0px 50px;
+}
+
+h2 {
+    position: absolute;
+    left: 40%;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    padding: 20px;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 18px;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 200ms ease-out, opacity 200ms ease-out, visibility 100ms ease-in;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active+.panel {
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+}
